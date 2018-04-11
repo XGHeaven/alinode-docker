@@ -10,6 +10,6 @@ RUN source $HOME/.bashrc && \
     tnvm use "alinode-v3.11.0" && \
     npm install -g @alicloud/agenthub
 
-COPY ../entrypoint.sh /
+COPY entrypoint.sh /
 
 ENTRYPOINT ["/entrypoint.sh"]
