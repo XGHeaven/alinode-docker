@@ -96,7 +96,12 @@ end
 
 desc "Build And Push"
 task :build_push => [:build_all] do
-    sh "docker push #{prefixName}"
+    sh "docker push #{$prefixName}"
+end
+
+desc "Push image"
+task :push do
+    sh "docker push #{$prefixName}"
 end
 
 desc "test"
