@@ -5,7 +5,10 @@ RUN wget -O- https://raw.githubusercontent.com/aliyun-node/tnvm/master/install.s
 
 ENV HOME /root
 
-RUN source $HOME/.bashrc &&     tnvm install "alinode-v3.11.0" &&     tnvm use "alinode-v3.11.0" &&     npm install -g @alicloud/agenthub --registry=https://registry.npm.taobao.org
+RUN source $HOME/.bashrc && \
+    tnvm install "alinode-v3.11.0" && \
+    tnvm use "alinode-v3.11.0" && \
+    npm install -g @alicloud/agenthub
 
 COPY entrypoint.sh /
 
