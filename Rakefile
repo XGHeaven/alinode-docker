@@ -10,8 +10,9 @@ $versions = []
 $majorVersionMap = {
     "1" => "1.10.0",
     "2" => "2.5.0",
-    "3" => "3.11.0",
-    "latest" => "3.11.0"
+    "3" => "3.11.3",
+    "4" => "4.1.0",
+    "latest" => "4.1.0"
 }
 
 def loadVersions()
@@ -65,18 +66,20 @@ end
 buildDockerfileFactiry('1')
 buildDockerfileFactiry('2')
 buildDockerfileFactiry('3')
+buildDockerfileFactiry('4')
 buildDockerfileFactiry('latest')
 
 desc "Build Dockerfile"
-task :build_dockerfile => [:build_dockerfile_latest, :build_dockerfile_3, :build_dockerfile_2, :build_dockerfile_1]
+task :build_dockerfile => [:build_dockerfile_latest, :build_dockerfile_4, :build_dockerfile_3, :build_dockerfile_2, :build_dockerfile_1]
 
 buildFactory('1')
 buildFactory('2')
 buildFactory('3')
+buildFactory('4')
 buildFactory('latest')
 
-desc "Build Docker Image for v1, v2, v3, latest"
-task :build_all => [:build_latest, :build_3, :build_2, :build_1]
+desc "Build Docker Image for v1, v2, v3, v4, latest"
+task :build_all => [:build_latest, :build_4, :build_3, :build_2, :build_1]
 
 desc "Build Docker Image with special version"
 task :build_version, [:version] do |t, args|

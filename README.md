@@ -6,8 +6,8 @@ Please see [this](http://alinode.aliyun.com)
 
 ## Version
 
-- `latest` now is [3.11.0](https://github.com/XGHeaven/alinode-docker/blob/master/latest/Dockerfile)
-- `3` now is [3.11.0](https://github.com/XGHeaven/alinode-docker/blob/master/3/Dockerfile)
+- `latest` now is [4.1.0](https://github.com/XGHeaven/alinode-docker/blob/master/latest/Dockerfile)- `4` now is [4.1.0](https://github.com/XGHeaven/alinode-docker/blob/master/4/Dockerfile)
+- `3` now is [3.11.3](https://github.com/XGHeaven/alinode-docker/blob/master/3/Dockerfile)
 - `2` now is [2.5.0](https://github.com/XGHeaven/alinode-docker/blob/master/2/Dockerfile)
 - `1` now is [1.10.0](https://github.com/XGHeaven/alinode-docker/blob/master/1/Dockerfile)
 
@@ -30,4 +30,4 @@ if `ALINODE_APP_ID` and `ALINODE_APP_SECRET` are empty. AgentX do not start. Run
 
 ## Build
 
-Run `rake build_dockerfile`. Take a coffee, auto build in cloud.
+Run `rake build_dockerfile & rake build_all`. Take a coffee, auto build in cloud.
